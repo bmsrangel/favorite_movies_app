@@ -1,0 +1,6 @@
+include: package:lint/analysis_options.yaml
+
+linter:
+  rules:
+    unnecessary_this: false
+    type_annotate_public_apis: false
