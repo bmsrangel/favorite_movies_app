@@ -26,8 +26,11 @@ class FavoritesScreen extends StatelessWidget {
         child: BlocBuilder<FavoriteMovieListBloc, List<MovieModel>>(
           builder: (context, favoriteMovieList) {
             if (favoriteMovieList == null) {
-              return const Center(
-                child: CircularProgressIndicator(),
+              return Center(
+                child: CircularProgressIndicator(
+                  valueColor:
+                      AlwaysStoppedAnimation(Theme.of(context).primaryColor),
+                ),
               );
             } else {
               final FavoriteMovieListBloc favoriteMovieListBloc =
@@ -45,30 +48,6 @@ class FavoritesScreen extends StatelessWidget {
                   onPressed: () => favoriteMovieListBloc
                       .setFavoriteMovie(favoriteMovieList[index]),
                 ),
-                // itemBuilder: (context, index) => ListTile(
-                //   leading: CachedNetworkImage(
-                //     imageUrl: favoriteMovieList[index].poster,
-                //     placeholder: (context, url) => const Center(
-                //       child: CircularProgressIndicator(),
-                //     ),
-                //   ),
-                //   title: Text(favoriteMovieList[index].titulo),
-                //   trailing: IconButton(
-                //     icon: Icon(
-                //       context
-                //               .bloc<FavoriteMovieListBloc>()
-                //               .isMovieFavorite(favoriteMovieList[index])
-                // ? Icons.favorite
-                // : Icons.favorite_border,
-                //       color: Colors.red,
-                //     ),
-                //     onPressed: () {
-                //       context
-                //           .bloc<FavoriteMovieListBloc>()
-                //           .setFavoriteMovie(favoriteMovieList[index]);
-                //     },
-                //   ),
-                // ),
               );
             }
           },

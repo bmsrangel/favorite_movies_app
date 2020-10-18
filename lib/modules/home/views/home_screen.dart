@@ -37,8 +37,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       context.bloc<MoviesListBloc>();
 
                   if (movieList == null) {
-                    return const Center(
-                      child: CircularProgressIndicator(),
+                    return Center(
+                      child: CircularProgressIndicator(
+                        valueColor: AlwaysStoppedAnimation(
+                            Theme.of(context).primaryColor),
+                      ),
                     );
                   } else if (movieList.isEmpty) {
                     return _buildOnErrorContent(moviesListBloc);

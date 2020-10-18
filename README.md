@@ -1,16 +1,30 @@
-# desafio_empresa_vitor
+# Catálogo de Filmes Favoritos
 
-A new Flutter project.
+Aplicação feita em Flutter que obtém uma lista de filmes a partir de uma API e permite que o usuário favorite até três filmes.
 
-## Getting Started
+<img src="screenshots/home.png" width=250px> &ensp;
+<img src="screenshots/details.png" width=250px> &ensp;
+<img src="screenshots/favorites.png" width=250px>
 
-This project is a starting point for a Flutter application.
+## Pacotes utilizados
 
-A few resources to get you started if this is your first Flutter project:
+- [carousel_slider](https://pub.dev/packages/carousel_slider): ^2.2.1
+- [cached_network_image](https://pub.dev/packages/cached_network_image): ^2.3.2+1
+- [dio](https://pub.dev/packages/dio): ^3.0.10
+- [shared_preferences](https://pub.dev/packages/shared_preferences): ^0.5.10
+- [flutter_bloc](https://pub.dev/packages/flutter_bloc): ^6.0.5
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Pacotes de desenvolvimento
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [lint](https://pub.dev/packages/lint): ^1.2.0
+
+## Executando a aplicação
+
+Para rodar a aplicação, é necessário ter o Flutter devidamente instalado e configurado. Em seguida, basta seguir as seguintes etapas:
+
+- Clonar o repositório;
+- Baixar os pacotes através executando o comando `flutter pub get` no diretório raiz da aplicação;
+- Executar a aplicação.
+
+**Obs.: Normalmente as IDEs executam o aplicativo em modo debug, o que pode não condizer com a performance esperada da versão de produção.**
+**Para rodar a aplicação de forma mais similar à versão final, basta executar o comando `flutter run --profile` no diretório raiz do projeto com um smartphone físico devidamente conectado e configurado**
